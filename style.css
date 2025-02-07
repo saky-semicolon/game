@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Center Game Container */
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Board Centering */
+#board {
+    display: grid;
+    grid-template-columns: repeat(10, 60px);
+    grid-template-rows: repeat(10, 60px);
+    gap: 5px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Player Pieces */
+.cell {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.2s;
+    cursor: pointer;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+    background: #ffe066;
+}
+
+/* Player Colors */
+.player1 { color: red; animation: bounce 0.5s; }
+.player2 { color: blue; animation: bounce 0.5s; }
+.player3 { color: green; animation: bounce 0.5s; }
+
+/* Winner Popup */
+#winner-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    box-shadow: 0px 0px 15px black;
+    border-radius: 15px;
+    text-align: center;
+    color: black;
+}
+
+.popup-content h2 {
+    color: #ff4500;
+}
+
+/* Restart Button */
+/* .restart-btn {
+    margin-top: 20px;
+    background: #28a745;
+    padding: 10px 15px;
+    cursor: pointer;
+} */
+
+.restart-btn {
+    margin-top: 20px;
+    background: #dc3545;
+    color: white;
+    padding: 12px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.restart-btn:hover {
+    background: #c82333;
+    transform: scale(1.1);
+}
