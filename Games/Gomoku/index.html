@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gomoku - Three in a Row</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Player Setup -->
+    <div id="player-setup">
+        <h2>Enter Player Names</h2>
+        <select id="playerCount" onchange="updatePlayerInputs()">
+            <option value="2">2 Players</option>
+            <option value="3">3 Players</option>
+        </select>
+        <div id="player-names">
+            <input type="text" id="player1-name" placeholder="Player 1 Name">
+            <input type="text" id="player2-name" placeholder="Player 2 Name">
+            <input type="text" id="player3-name" placeholder="Player 3 Name" style="display:none;">
+        </div>
+        <button onclick="setPlayers()">Start Game</button>
+    </div>
+
+    <!-- Game Board -->
+    <div id="game-container" style="display:none;">
+        <h2 id="turn">⭐ Current Turn: </h2>
+        <div id="board"></div>
+        <!-- <button class="restart-btn" onclick="resetGame()">🔄 Restart</button> -->
+        <button class="restart-btn" onclick="resetGame()">🔄 Restart Game</button>
+    </div>
+
+    <!-- Winner Popup -->
+    <div id="winner-popup">
+        <div class="popup-content">
+            <h2 id="winner-message"></h2>
+            <button onclick="closePopup()">🎉 Play Again</button>
+        </div>
+    </div>
+
+    <!-- Sound Effects -->
+    <audio id="clickSound" src="click.mp3"></audio>
+    <audio id="winSound" src="winning.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
