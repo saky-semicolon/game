@@ -5,5 +5,5 @@ The APK folder in this repository contains Android Package Kit (APK) files, whic
 
 1. Gomoku.apk
 2. 
-
+Readme.md: The list of Android Applications and Games of this Repository.
 These APKs allow users to experience applications and games offline or as standalone Android apps! 🚀
